@@ -1,5 +1,16 @@
 --require("scripts.gcbot.functions") --REQUIRE OTHER SCRIPT FILES
 
+--[[
+****TODO
+-Start implementing diamond solving
+-Add other dragons
+-Add seasons
+-Add hell
+-Reset speed to 1 after X amount of time (to ensure its set to 2 if somehow it reverted)
+-Add wave skipping
+-Add advertisement watching
+]]
+
 --Globals
 Events = {
 	NumOfEvents = 1,
@@ -26,8 +37,8 @@ end
 --Script init function
 function start()
 	math.randomseed(23453437)
-	Bot.IS_DEBUG = true
-	Bot.IS_PLAYING = true
+	Bot.IS_DEBUG = true -- Set debug messages to true or false
+	Bot.IS_PLAYING = true -- Not required, starts bot in "playing" state
 	--TODO Detect when platform is loaded
 	Bot:BOOT_PLATFORM(Platforms.PLATFORM_BLUESTACKS2) --BOOT PLATFORM(BLUESTACKS 2)
 	--TODO Check adb has connected
